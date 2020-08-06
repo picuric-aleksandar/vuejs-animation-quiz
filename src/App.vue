@@ -35,6 +35,7 @@ import WrongComponent from './components/WrongComponent.vue';
     components:{
       'app-correct-cmpt': CorrectComponent,
       'app-wrong-cmpt': WrongComponent,
+      'app-question-cmpt': QuestionComponent,
     }
 }
 </script>
