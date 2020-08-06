@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import CorrectComponent from './components/CorrectComponent.vue'
+import CorrectComponent from './components/CorrectComponent.vue';
+import WrongComponent from './components/WrongComponent.vue';
   export default {
     data () {
       return {
@@ -23,7 +24,8 @@ import CorrectComponent from './components/CorrectComponent.vue'
       }
     },
     components:{
-      'app-correct-cmpt': CorrectComponent
+      'app-correct-cmpt': CorrectComponent,
+      'app-wrong-cmpt': WrongComponent,
     }
 }
 </script>
