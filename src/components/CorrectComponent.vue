@@ -19,7 +19,7 @@
     },
     methods:{
       confirm(){
-        this.$emit('comfirmed');
+        this.$emit('confirmed');
       }
     }
   }
