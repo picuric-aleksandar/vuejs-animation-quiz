@@ -6,12 +6,10 @@
             </div>
         </div>
         <hr>
-        <button class="btn btn-primary" @click="switchCmpt">Switch</button>
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-            <component :is="activeCmpt"> 
+            <component :is="activeCmpt" @answered="switchCmpt($event)"> 
             </component>
-          <app-question-cmpt></app-question-cmpt>
           </div>
         </div>
     </div>
@@ -25,12 +23,22 @@ import QuestionComponent from './components/QuestionComponent.vue';
     data () {
       return {
         text: '59',
-        activeCmpt: 'app-correct-cmpt'
+        activeCmpt: 'app-question-cmpt'
       }
     },
     methods: {
-      switchCmpt(){
-        this.activeCmpt = this.activeCmpt == 'app-correct-cmpt' ? 'app-wrong-cmpt' : 'app-correct-cmpt'
+      switchCmpt(isCorrect){
+        // let counter = 0;
+        // console.log(isCorrect)
+        // if(counter === 0){
+        //   this.activeCmpt = 'app-question-cmpt'
+        //   counter++;
+        // }
+        if(isCorrect){
+          this.activeCmpt = 'app-correct-cmpt'
+        }else{
+          this.activeCmpt = 'app-wrong-cmpt'
+        }
       }
     },
     components:{
