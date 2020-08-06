@@ -7,7 +7,7 @@
       <div 
         class="col-xs-12 col-sm-6 text-center" 
         v-for="ans in answersData" 
-        :key="ans">
+        :key="ans.answer">
         <button 
           class="btn btn-primary btn-lg" 
           style="margin: 10px" 
@@ -25,10 +25,10 @@
       return{
         question: 'Oops, an error ocurred :/',
         answersData: [
-          {correct: true, answer: 0},
-          {correct: false, answer: 0},
-          {correct: false, answer: 0},
-          {correct: false, answer: 0},
+          {correct: null, answer: 0},
+          {correct: null, answer: 0},
+          {correct: null, answer: 0},
+          {correct: null, answer: 0},
         ]
       }
     },
