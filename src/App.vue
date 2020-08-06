@@ -6,11 +6,13 @@
             </div>
         </div>
         <hr>
+        <button class="btn btn-primary" @click="switchCmpt">Switch</button>
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <app-correct-cmpt :answer="text"></app-correct-cmpt>
-              <app-wrong-cmpt :answer="text"></app-wrong-cmpt>
+              <component :is="activeCmpt"> 
+              </component>
             </div>
+            
         </div>
     </div>
 </template>
@@ -21,7 +23,13 @@ import WrongComponent from './components/WrongComponent.vue';
   export default {
     data () {
       return {
-        text: '59'
+        text: '59',
+        activeCmpt: 'app-correct-cmpt'
+      }
+    },
+    methods: {
+      switchCmpt(){
+        this.activeCmpt = this.activeCmpt == 'app-correct-cmpt' ? 'app-wrong-cmpt' : 'app-correct-cmpt'
       }
     },
     components:{
