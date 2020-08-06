@@ -3,7 +3,7 @@
       <h3>Your answer is {{correctInfo}}!</h3>
       <hr>
       <h3>{{answer}}</h3>
-      <button class="btn btn-success">Confirm</button>
+      <button class="btn btn-success" @click="confirm">Confirm</button>
     </div>
 </template>
 
@@ -15,6 +15,11 @@
     data(){
       return {
         correctInfo: 'Correct',
+      }
+    },
+    methods:{
+      confirm(){
+        this.$emit('comfirmed');
       }
     }
   }
