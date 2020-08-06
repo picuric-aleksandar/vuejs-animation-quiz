@@ -8,11 +8,11 @@
         <hr>
         <button class="btn btn-primary" @click="switchCmpt">Switch</button>
         <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-              <component :is="activeCmpt"> 
-              </component>
-            </div>
-            
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <component :is="activeCmpt"> 
+            </component>
+          <app-question-cmpt></app-question-cmpt>
+          </div>
         </div>
     </div>
 </template>
@@ -20,6 +20,7 @@
 <script>
 import CorrectComponent from './components/CorrectComponent.vue';
 import WrongComponent from './components/WrongComponent.vue';
+import QuestionComponent from './components/QuestionComponent.vue';
   export default {
     data () {
       return {
@@ -35,6 +36,7 @@ import WrongComponent from './components/WrongComponent.vue';
     components:{
       'app-correct-cmpt': CorrectComponent,
       'app-wrong-cmpt': WrongComponent,
+      'app-question-cmpt': QuestionComponent,
     }
 }
 </script>
