@@ -1,19 +1,35 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-        <p>{{info}}</p>
-      </div>
+    <div class="alert alert-success">
+      <h3>Your answer is {{correctInfo}}!</h3>
+      <hr>
+      <h3>{{answer}}</h3>
+      <button class="btn btn-success">Confirm</button>
     </div>
-  </div>
 </template>
 
 <script>
   export default {
+    props:{
+      answer: null
+    },
     data(){
       return {
-        info: 'Correct Component',
+        correctInfo: 'Correct',
       }
     }
   }
 </script>
+
+<style scoped>
+  .alert-success{
+    text-align: center;
+  }
+  hr {
+    width: 50%;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+  h3:nth-child(2) {
+    color: black;
+  }
+</style>
