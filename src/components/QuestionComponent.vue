@@ -38,7 +38,7 @@
         const secondNumber = this.generateRandomNumber(1,100);
         const modeNumber = this.generateRandomNumber(1,2);
 
-        let correctAnswer
+        let correctAnswer;
 
 
         /*Generisanje pitanja i na osnovu random broja izmedju 1 i 2 daje oduzimanje ili sabiranje */
@@ -63,8 +63,8 @@
 
         /**Generisanje odgovora kroz random brojeve */
         for(let i = 0; i < 4; i++){ //imamo 4 odgovora, zato loop na 4
-          this.answersData[i].answer = this.generateRandomNumber(correctAnswer - 10, correctAnswer + 10, correctAnswer);
-          this.answersData[i].correct = false;
+          this.answersData[i].answer = this.generateRandomNumber(correctAnswer - 10, correctAnswer + 10, correctAnswer); // ospeg (-10) - correct - (+10)
+          this.answersData[i].correct = false; //sve odgovore stavljamo na false
         }
 
         //gazimo jedan od odgovora sa tacnim odgovorom

@@ -22,7 +22,6 @@ import QuestionComponent from './components/QuestionComponent.vue';
   export default {
     data () {
       return {
-        text: '59',
         activeCmpt: 'app-question-cmpt'
       }
     },
